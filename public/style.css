@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #2C3E50;
+    color: #FFF;
+    font-family: "Lato",sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container header {
+    margin: 35px 0 15px 0;
+}
+
+.container header h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container main section #song {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container main section #searchButton {
+    display: block;
+    width: 20%;
+    margin: 5px auto;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.container main #section-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
