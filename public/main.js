@@ -1,4 +1,6 @@
-const search = async () => {
+const search = async (e) => {
+
+    e.preventDefault();
 
     let searched = document.getElementById('song').value;
     console.log(searched);
@@ -17,7 +19,7 @@ const search = async () => {
         result.style.margin = '5px 0'
 
         document.getElementById('section-2').append(result);
-
+        
         const artist = document.createElement('h2');
         artist.textContent = song.artist.name;
         artist.style.textAlign = 'center';
@@ -43,12 +45,9 @@ const search = async () => {
 
         result.append(artist, cover, title, previewSong);
 
-
-
-
     });
 
 }
 
-const searchEvent = document.getElementById('searchButton');
-searchEvent.addEventListener('click', search)
+const searchEvent = document.querySelector('form');
+searchEvent.addEventListener('submit', search)
