@@ -8,7 +8,7 @@ const search = async (e) => {
     const data = await response.json();
 
     const songs = data.data;
-    console.log(songs);
+    // console.log(songs);
     
     let result = '';
     songs.map(song => {
