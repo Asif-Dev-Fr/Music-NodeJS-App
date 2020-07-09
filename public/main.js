@@ -3,11 +3,9 @@ const search = async (e) => {
     e.preventDefault();
 
     let searched = document.getElementById('song').value;
-    console.log(searched);
 
     const response = await fetch(`/api/${searched}`);
     const data = await response.json();
-    //console.log(data);
 
     const songs = data.data;
     console.log(songs);
@@ -16,13 +14,18 @@ const search = async (e) => {
 
         const result = document.createElement('div');
         result.style.width = '33.3333%';
-        result.style.margin = '5px 0'
+        result.style.margin = '10px 0'
 
         document.getElementById('section-2').append(result);
         
         const artist = document.createElement('h2');
         artist.textContent = song.artist.name;
         artist.style.textAlign = 'center';
+        artist.style.background = '#445565';
+        artist.style.color = '#FFF';
+        artist.style.width = '230px';
+        artist.style.margin = '0 auto';
+        artist.style.padding = '10px';
         
         const cover = document.createElement('img');
         cover.src = song.album.cover_medium; 
@@ -33,7 +36,8 @@ const search = async (e) => {
         const title = document.createElement('h3');
         title.textContent = song.title;
         title.style.textAlign = 'center';
-        title.style.margin = '5px 0';
+        title.style.padding = '10px 0';
+        
 
         const previewSong = document.createElement('audio');
         previewSong.controls = 'controls';
