@@ -2,7 +2,7 @@ const search = async (e) => {
 
     e.preventDefault();
 
-    let searched = document.getElementById('song').value;
+    const searched = document.getElementById('song').value;
 
     const response = await fetch(`/api/${searched}`);
     const data = await response.json();
@@ -48,6 +48,8 @@ const search = async (e) => {
 
 
         result.append(artist, cover, title, previewSong);
+
+        document.querySelector('form').reset();
 
     });
 
