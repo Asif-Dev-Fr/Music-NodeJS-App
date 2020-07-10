@@ -14,7 +14,7 @@ const search = async (e) => {
     songs.map(song => {
         
         const artist = `<h2 class=artist-name >${song.artist.name}</h2>`;
-        const cover = `<img class="album-cover" src="${song.album.cover_medium} alt="${song.title}">`;
+        const cover = `<img class="album-cover" src="${song.album.cover_medium}" alt="${song.title}">`;
         const title = `<h3 class="song-title">${song.title}</h3>`;
         const previewSong = `<audio class="song-preview" controls src="${song.preview}"></audio>`
   
