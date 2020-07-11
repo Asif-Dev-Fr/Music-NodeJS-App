@@ -77,3 +77,30 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 499px) {
+
+    .container main #section-2 .song {
+        width: 90%;
+        margin: 8px auto;
+    }
+
+    .container main #section-2 .song .song-preview {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 768px) {
+    .container main #section-2 .song {
+        width: 45%;
+        margin: 8px auto;
+    }
+
+    .container main #section-2 .song .song-preview {
+        width: 100%;
+    }
+    
+  
+  }
+
+  
